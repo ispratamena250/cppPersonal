@@ -9,17 +9,11 @@ int main(){
 	while(x != y){
 		if(x > y){
 			cout << "Decrescente" << endl;
-			cin >> x >> y;
-			if(x < y){
-				cout << "Crescente" << endl;
-				cin >> x >> y;
-				if(x == y){
-					break;
-				}
-			}
+		}else{
+			cout << "Crescente" << endl;
 		}
+		cin >> x >> y;
 	}
 
 	return 0;
 }
-#Tentar depois!
