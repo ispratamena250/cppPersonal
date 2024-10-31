@@ -9,7 +9,7 @@ int main(){
 	cin >> s;
 	aux = s.size();
 	for(int i=0; i<aux; i++){
-		if(s[i] == 'H' || s[i] == 'Q' || s[i] == '9' || s[i] == '+'){
+		if(s[i] == 'H' || s[i] == 'Q' || s[i] == '9'){
 			count++;
 		}
 	}
