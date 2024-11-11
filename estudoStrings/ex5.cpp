@@ -5,15 +5,16 @@
 
 using namespace std;
 
-int main(){ //aldfjalkdfj7498247
+int main(){ 
 	string nome;
-	int quant=0, len, count=0;
+	int quant=0, len/*, count=0*/;
 
 	cin >> nome;
 	len = nome.size();
 	vector<int> v(len);
 
-	//Vetor cíclico
+	/*
+	//Vetor cíclico (não necessário)
 	for(int i=0; i<len; i++){ 
 		if(i == 0){
 			v[i] = count;
@@ -26,26 +27,25 @@ int main(){ //aldfjalkdfj7498247
 				v[i] = count;
 			}
 		}
+	}*/
+	for(int i=0; i<len; i++){
+		v[i] = i;
 	}
 
 	//Conta a quantidade de letras entre a string e o vetor
 	for(int i=0; i<len; i++){
 		for(int j=0; j<len; j++){
-			cout << v[j] << " ";
 			if(nome[i] == ('0' + v[j])){
-				cout << "\tEsse:" << nome[i] << endl;
+				//cout << "\tEsse:" << nome[i] << "\t" << v[j] << endl;
 				quant++;
 			}
 		}
-		cout << endl;
 	}
-	cout << quant << endl;
-	/*
-	if((quant - len) < 0){
-		cout << "Quant: " << (quant - len)*(-1) << endl;
+	if(len > quant){
+		cout << len - quant << endl;
 	}else{
-		cout << "Quant: " << quant-len << endl;
-	}*/
+		cout << (len - quant)*(-1) << endl;
+	}
 
 	return 0;
 }
