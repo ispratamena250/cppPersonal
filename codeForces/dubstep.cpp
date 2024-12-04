@@ -1,31 +1,35 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 int main(){
-	int aux=0, tam;
-
 	string s;
 	cin >> s;
+	string sub = "WUB";
+	size_t pos = 0;
+	vector<size_t> posicoes;
 
-	tam = s.size();
-	for(int i=0; i<tam; i++){
-		if(i==0){
-			if(s[aux] == 'W' && s[aux+1] == 'U' && s[aux+2] == 'B'){
-				cout << s[i];
-				aux = aux+3;
-				cout << aux << endl;
-			}
-		}else{
-			if(s[aux] == 'W' && s[aux+1] == 'U' && s[aux+2] == 'B'){
-				cout << s[i];
-				aux = aux+3;
-				cout << aux << endl;
+	while((pos = s.find(sub, pos)) != string::npos){
+		posicoes.push_back(pos);
+		pos += sub.size();
+	}
+
+	for(size_t i=0; i<s.size(); i++){
+		bool isSub = false;
+		for(size_t p : posicoes){
+			if(i>=p && i<p + sub.size()){
+				isSub = true;
+				break;
 			}
 		}
+		
+		if(!isSub){
+			cout << s[i] << " ";
+		}
 	}
-	cout << endl;	
+	cout << endl;
 
 	return 0;
 }
