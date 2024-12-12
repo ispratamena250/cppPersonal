@@ -7,27 +7,37 @@ int main(){
 	cin.tie(NULL);
 	cout.tie(NULL);	
 
-	string s, aux;
+	string s, auxString;
 	vector<int> v;
-	
+	int count=0, index=0;	
+
 	cin >> s;
 	for(size_t i=0; i<s.size(); i++){
 		if(s[i] != '+'){
-			aux += s[i];
+			auxString += s[i];
+			count++;
 		}else{
-			if(!aux.empty()){
-				v.push_back(stoi(aux));
-				aux.clear();	
+			if(!auxString.empty()){
+				v.push_back(stoi(auxString));
+				auxString.clear();	
 			}	
 		}
 	}	
-	if(!aux.empty()){
-		v.push_back(stoi(aux));
+	if(!auxString.empty()){
+		v.push_back(stoi(auxString));
 	}
 	
+	sort(v.begin(), v.end());
+
 	for(int num : v){
-		cout << num << endl;
+		index++;
+		if(index != count){
+			cout << num << "+";
+		}else{
+			cout << num;
+		}
 	}
+	cout << endl;
 
 	return 0;
 }
