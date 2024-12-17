@@ -8,8 +8,8 @@ int main(){
 	cin >> s;
 	
 	for(size_t i=0; i<s.size(); i++){
-		if(i==1 and s[i] >= 'a' and s[i]<= 'z'){
-			s[i] = s[i] - ('a' - 'A');
+		if(i==1 and s[i] >= 'A' and s[i]<= 'Z'){
+			s[i] = s[i] - ('A' - 'a');
 		}
 	}
 	for(size_t i=0; i<s.size(); i++){
