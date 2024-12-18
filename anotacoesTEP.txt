@@ -1,0 +1,19 @@
+Strings - TEP
+1)  - palíndromos;
+    - histograma;
+    - strings e programação funcional;
+    - tokenização;
+    - anagramas;
+    - expressões regulares.
+
+2)  - busca em strings;
+    - busca completa;    
+    - strings e hashes;
+    - polynomial rolling hash;
+    - algoritmo de Rabin-Karp;
+    - variantes do algoritmo de Rabin-Karp;
+    - algoritmo de Morris-Pratt;
+    - algoritmo de Knuth-MorrisPratt;
+    - z-function;
+    - aplicações da z-function;
+    - busca em strings na STL.
