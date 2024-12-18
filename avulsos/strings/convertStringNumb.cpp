@@ -8,14 +8,14 @@
 using namespace std;
 
 int main(){
-	string s;
+	string s(5, ' ');
 
 	for(int i=0; i<5; i++){
 		cin >> s[i];
 	}	
 
-	for(int i=0; i<5; i++){
-		s[i] += 1;
+	for(int i=0; i<5; i++){ //Converte string em números
+		s[i] -= '0';
 	}
 	
 	for(int i=0; i<5; i++){
