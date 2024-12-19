@@ -4,7 +4,7 @@ Strings - TEP
     - strings e programação funcional;
     - tokenização;
     - anagramas;
-    - expressões regulares.
+    - expressões regulares (regex).
 
 2)  - busca em strings;
     - busca completa;    
