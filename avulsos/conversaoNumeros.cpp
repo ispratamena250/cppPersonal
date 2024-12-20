@@ -1,13 +1,15 @@
 #include <iostream>
 #include <bitset>
 
-int main(){
-	int n = 3;
+using namespace std;
 
-	std::cout << std::dec << n << std::endl;
-	std::cout << std::hex << n << std::endl;
-	std::cout << std::oct << n << std::endl;
-	std::cout << std::bitset<20>(n) << std::endl;
+int main(){
+	int n = 256;
+
+	//cout << dec << n << endl;
+	//cout << hex << n << endl;
+	//cout << oct << n << endl;
+	cout << bitset<9>(n) << endl;
 
 	return 0;
 }
