@@ -7,7 +7,8 @@ using namespace std;
 int main(){
 	vector<int> v;
 
-	int n, div, q;
+	long long n;
+	int div, q;
 	cin >> n;
 
 	div = n;
