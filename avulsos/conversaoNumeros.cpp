@@ -9,7 +9,7 @@ int main(){
 	//cout << dec << n << endl;
 	//cout << hex << n << endl;
 	//cout << oct << n << endl;
-	cout << bitset<10>(n) << endl;
+	cout << bitset<20>(n) << endl;
 
 	return 0;
 }
