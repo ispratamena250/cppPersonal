@@ -2,44 +2,39 @@
 
 using namespace std;
 
+void guess(string e);
+
 int main(){
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	//int count=0;
-	size_t n;
-	vector<string> s;
-	string aux;
+  int z;
+  vector<string> s;
+  cin >> z;
 
-	cin >> n;
+  for(int i=0; i<z; i++){
+    string aux;
+    cin >> aux;
+    s.push_back(aux);
+  }
 
-	for(size_t i=0; i<n; i++){
-		cin >> aux;
-		s.push_back(aux);
-	}
-
-	cout << endl << endl;
-	/*for(string e : s){
-		//cout << e << e.size() << endl;
-		if(e[count] == 'a'){
-			cout << e[count] << " " << count << endl;
-		}else{
-			cout << e << endl;
-		}
-
-		cout << count << endl;
-		count++;
-	}*/
-	
-	cout << "comeca" << endl;
-	for(size_t i=0; i<n; i++){
-		//cout << "aqui " << s[i] << endl;
-		if(s[i+1] != s[i]){
-			cout << i << " " << i+1 << " " << s[i+1] << endl;
-		}
-	}
+  for(auto e : s)
+    guess(e);
 
 	cout << endl;
 	return 0;
+}
+
+void guess(string e){
+  for(size_t i=0; i<e.size(); i++){
+    if(i == 0){
+      cout << e[i];
+    }else if(e.size() > 2 and i%2 == 0){
+      cout << e[i];
+    }else if(i == e.size()-1){
+      cout << e[i];
+    }
+  }
+  cout << endl;
 }
