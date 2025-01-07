@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(){
-	string s = "Deitado eternamente em berco esplendido";
+	string s = "Deitado berco eternamente em berco esplendido";
 	string sub = "berco ";
 	
 	size_t pos = s.find(sub);
