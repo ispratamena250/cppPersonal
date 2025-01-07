@@ -6,8 +6,8 @@ using namespace std;
 int occurences(const string& P, const string& S);
 
 int main(){
-  string P = "Deitado eternamente oc em berco oc esplendido";
-  string S = "oc";
+  string S = "Deitado berco eternamente em berco esplendido";
+  string P = "berco";
 
   cout << occurences(P, S) << endl; 
 
@@ -20,8 +20,9 @@ int occurences(const string& P, const string& S){
   int n = S.size();
   int occ = 0;
 
-  for(int i=0; i<n-m; i++){
+  for(int i=0; i<=n-m; i++){
     occ += (P == S.substr(i, m) ? 1 : 0);
+    cout << "String: " << S.substr(i, m) << endl;
   }
 
   return occ;
