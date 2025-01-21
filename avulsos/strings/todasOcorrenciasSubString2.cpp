@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
 int main(){
 	string s = "tres pratos de trigo para tres tigres tres tristes tres";
 	string sub = "tres";
+  vector<int> v(s.size(), ' ');
 	size_t i=0;
 
 	size_t pos = s.find(sub);
@@ -17,7 +19,9 @@ int main(){
 		}
 		i++;
 	}
-	cout << endl;
 
+  
+
+	cout << endl;
 	return 0;
 }
