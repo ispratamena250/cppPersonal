@@ -123,13 +123,15 @@ int main(int argc, char *argv[2]){ //Quando tiver mais memória, analisar para u
   //system("open dados2_collatz.txt");
   //system("open dados3_collatz.txt");
 
-  //fprintf(gnuplotPipe, "set terminal wxt size 1700,850\n"); //MultiPlot
-  //fprintf(gnuplotPipe, "set multiplot layout 1,3 title 'Análise da Conjectura de Collatz'\n"); //Multiplot
-  fprintf(gnuplotPipe, "set terminal pdf size 10,8\n"); //Output: pdf
-  fprintf(gnuplotPipe, "set output 'grafico3_collatz.pdf'\n"); //Output: pdf
+  fprintf(gnuplotPipe, "set terminal wxt size 1700,850\n"); //MultiPlot
+  fprintf(gnuplotPipe, "set multiplot layout 1,3 title 'Análise da Conjectura de Collatz'\n"); //Multiplot
+  //fprintf(gnuplotPipe, "set terminal pdf size 10,8\n"); //Output: pdf
+  //fprintf(gnuplotPipe, "set output 'grafico3_collatz.pdf'\n"); //Output: pdf
+  //fprintf(gnuplotPipe, "set terminal pngcairo size 1700,850 enhanced font 'Arial,12'\n"); //Output: png
+  //fprintf(gnuplotPipe, "set output 'grafico_collatz.png'\n"); //Output: png
   fprintf(gnuplotPipe, "set xlabel 'Números'\n");
   fprintf(gnuplotPipe, "set ylabel 'Quantidade de números gerados'\n");
-  fprintf(gnuplotPipe, "plot 'dados1_collatz.txt' u 1:2 w p pt 7 lc rgb 'red' notitle\n");
+  fprintf(gnuplotPipe, "plot 'dados1_collatz.txt' u 1:2 w l lc rgb 'red' notitle\n");
   fprintf(gnuplotPipe, "set xlabel 'Count'\n");
   fprintf(gnuplotPipe, "set ylabel 'Quantidade de repetições de count'\n");
   fprintf(gnuplotPipe, "plot 'dados3_collatz.txt' u 1:2 w lines lc rgb 'blue' notitle\n");
@@ -139,8 +141,9 @@ int main(int argc, char *argv[2]){ //Quando tiver mais memória, analisar para u
   fprintf(gnuplotPipe, "set boxwidth 0.8\n");
   fprintf(gnuplotPipe, "set style line 1 lc rgb 'orange'\n");
   fprintf(gnuplotPipe, "plot 'dados4_collatz.txt' u 1:2 w boxes ls 1 notitle\n");
-  fprintf(gnuplotPipe, "set output\n"); //Output: pdf
-  //fprintf(gnuplotPipe, "unset multiplot\n"); //Multiplot
+  //fprintf(gnuplotPipe, "set output\n"); //Output: pdf
+  //fprintf(gnuplotPipe, "set output\n"); //Output: png
+  fprintf(gnuplotPipe, "unset multiplot\n"); //Multiplot
 
   pclose(gnuplotPipe);
 
