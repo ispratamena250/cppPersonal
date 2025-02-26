@@ -1,3 +1,10 @@
+/*
+ * To download OpenCV: 
+ * 	$ sudo apt update
+ * 	$ sudo apt install libopencv-dev
+ * To compile: g++ -o redimencionar redimencionar.cpp -I/usr/include/opencv4 `pkg-config --cflags --libs opencv4`
+ * To run: ./redimencionar
+ * */
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
