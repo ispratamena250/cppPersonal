@@ -1,0 +1,65 @@
+d.cpp: In function ‘int main()’:
+d.cpp:21:29: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type&)’
+   21 |                vs1.push_back(s[i]);
+      |                ~~~~~~~~~~~~~^~~~~~
+In file included from /usr/include/c++/13/vector:66,
+                 from /usr/include/c++/13/functional:64,
+                 from /usr/include/x86_64-linux-gnu/c++/13/bits/stdc++.h:53,
+                 from d.cpp:1:
+/usr/include/c++/13/bits/stl_vector.h:1281:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1281 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:35: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘const std::vector<std::__cxx11::basic_string<char> >::value_type&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+ 1281 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/13/bits/stl_vector.h:1298:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(value_type&&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1298 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1298:30: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘std::vector<std::__cxx11::basic_string<char> >::value_type&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+ 1298 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+d.cpp:24:29: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type&)’
+   24 |                vs2.push_back(s[j]);
+      |                ~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1281 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:35: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘const std::vector<std::__cxx11::basic_string<char> >::value_type&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+ 1281 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/13/bits/stl_vector.h:1298:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(value_type&&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1298 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1298:30: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘std::vector<std::__cxx11::basic_string<char> >::value_type&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+ 1298 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+d.cpp:32:29: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type&)’
+   32 |                vs1.push_back(s[i]);
+      |                ~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1281 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:35: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘const std::vector<std::__cxx11::basic_string<char> >::value_type&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+ 1281 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/13/bits/stl_vector.h:1298:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(value_type&&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1298 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1298:30: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘std::vector<std::__cxx11::basic_string<char> >::value_type&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+ 1298 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
+d.cpp:35:29: error: no matching function for call to ‘std::vector<std::__cxx11::basic_string<char> >::push_back(__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type&)’
+   35 |                vs2.push_back(s[j]);
+      |                ~~~~~~~~~~~~~^~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1281 |       push_back(const value_type& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1281:35: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘const std::vector<std::__cxx11::basic_string<char> >::value_type&’ {aka ‘const std::__cxx11::basic_string<char>&’}
+ 1281 |       push_back(const value_type& __x)
+      |                 ~~~~~~~~~~~~~~~~~~^~~
+/usr/include/c++/13/bits/stl_vector.h:1298:7: note: candidate: ‘void std::vector<_Tp, _Alloc>::push_back(value_type&&) [with _Tp = std::__cxx11::basic_string<char>; _Alloc = std::allocator<std::__cxx11::basic_string<char> >; value_type = std::__cxx11::basic_string<char>]’
+ 1298 |       push_back(value_type&& __x)
+      |       ^~~~~~~~~
+/usr/include/c++/13/bits/stl_vector.h:1298:30: note:   no known conversion for argument 1 from ‘__gnu_cxx::__alloc_traits<std::allocator<char>, char>::value_type’ {aka ‘char’} to ‘std::vector<std::__cxx11::basic_string<char> >::value_type&&’ {aka ‘std::__cxx11::basic_string<char>&&’}
+ 1298 |       push_back(value_type&& __x)
+      |                 ~~~~~~~~~~~~~^~~
