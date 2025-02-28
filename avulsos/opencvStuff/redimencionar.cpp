@@ -11,7 +11,7 @@
 using namespace std;
 
 int main(){
-	cv::Mat imagem = cv::imread("gato1.jpg");
+	cv::Mat imagem = cv::imread("imagemRedimencionada.jpg");
 	if(imagem.empty()){
 		cerr << "Erro ao carregar imagem" << endl;
 		return -1;
@@ -28,7 +28,7 @@ int main(){
 	cv::imshow("Imagem original", imagem);
 	cv::imshow("Imagem redimencionada", imagemRedimencionada);
 
-	cv::imwrite("imagemRedimencionada.jpg", imagemRedimencionada);
+	cv::imwrite("gato4Redimencionada2.png", imagemRedimencionada);
 
 	cv::waitKey(0);
 
