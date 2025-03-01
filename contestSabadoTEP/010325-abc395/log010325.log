@@ -1,0 +1,50 @@
+Regions: 4
+->Before: 
+countTop: 0
+countBotton: 7
+countLeft: 0
+countRight: 7
+->After: 
+countTop: 1
+countBotton: 6
+countLeft: 1
+countRight: 6
+
+
+->Before: 
+countTop: 1
+countBotton: 6
+countLeft: 1
+countRight: 6
+->After: 
+countTop: 2
+countBotton: 5
+countLeft: 2
+countRight: 5
+
+
+->Before: 
+countTop: 2
+countBotton: 5
+countLeft: 2
+countRight: 5
+->After: 
+countTop: 3
+countBotton: 4
+countLeft: 3
+countRight: 4
+
+
+->Before: 
+countTop: 3
+countBotton: 4
+countLeft: 3
+countRight: 4
+->After: 
+countTop: 4
+countBotton: 3
+countLeft: 4
+countRight: 3
+
+
+Aqui: 4 4
