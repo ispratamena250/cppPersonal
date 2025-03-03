@@ -11,14 +11,14 @@
 using namespace std;
 
 int main(){
-	cv::Mat imagem = cv::imread("imagemRedimencionada.jpg");
+	cv::Mat imagem = cv::imread("Geany-Logo.png");
 	if(imagem.empty()){
 		cerr << "Erro ao carregar imagem" << endl;
 		return -1;
 	}
 	
-	int novaLargura = 500;
-	int novaAltura = 500;
+	int novaLargura = 256;
+	int novaAltura = 256;
 	cv::Size novaResolucao(novaLargura, novaAltura);
 
 	cv::Mat imagemRedimencionada;
@@ -28,7 +28,7 @@ int main(){
 	cv::imshow("Imagem original", imagem);
 	cv::imshow("Imagem redimencionada", imagemRedimencionada);
 
-	cv::imwrite("gato4Redimencionada2.png", imagemRedimencionada);
+	cv::imwrite("geany_256x256.png", imagemRedimencionada);
 
 	cv::waitKey(0);
 
