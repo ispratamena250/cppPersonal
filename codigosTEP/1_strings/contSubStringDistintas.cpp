@@ -32,6 +32,7 @@ int unique_substrings(const string& s){
     for (int i = 0; i < N; ++i){
         for (int j = i; j < N; ++j){
             auto hij = h(i, j, ps, is);
+	    //cout << "Aqui: " << hij << endl;
             hs.insert(hij);
         }
     }
