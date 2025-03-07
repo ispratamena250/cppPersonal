@@ -11,7 +11,7 @@
 using namespace std;
 
 int main(){
-	cv::Mat imagem = cv::imread("Geany-Logo.png");
+	cv::Mat imagem = cv::imread("gnuplot_icon.png");
 	if(imagem.empty()){
 		cerr << "Erro ao carregar imagem" << endl;
 		return -1;
@@ -28,7 +28,7 @@ int main(){
 	cv::imshow("Imagem original", imagem);
 	cv::imshow("Imagem redimencionada", imagemRedimencionada);
 
-	cv::imwrite("geany_256x256.png", imagemRedimencionada);
+	cv::imwrite("gnuplotIcon_256x256.png", imagemRedimencionada);
 
 	cv::waitKey(0);
 
