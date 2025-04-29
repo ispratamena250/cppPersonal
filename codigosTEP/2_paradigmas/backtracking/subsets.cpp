@@ -9,7 +9,8 @@ void process_solution(const vector<int>& xs);
 vector<int> candidates(int i, const vector<int>& as);
 
 int main(){
-	vector<int> as { 2, 3, 5, 7, 11 }, xs;
+	//vector<int> as { 2, 3, 5, 7, 11 }, xs;
+	vector<int> as { 32, 16, 8, 4, 2, 1, 8, 4, 2, 1 }, xs;
 
 	backtracking(xs, 0, as.size(), as);
 
@@ -37,12 +38,13 @@ void backtracking(vector<int>& xs, int i, int N, const vector<int>& as){
 bool is_solution(int i, int N){ return i == N; }
 
 void process_solution(const vector<int>& xs){
-	cout << "{ ";
+	//cout << "{ ";
 
 	for (auto x : xs)
 		cout << x << ' ';
 
-	cout << "}\n";
+	//cout << "}\n";
+	cout << endl;
 }
 
 vector<int> candidates(int i, const vector<int>& as){
