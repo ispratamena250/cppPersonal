@@ -13,10 +13,11 @@ int main(){
 		int l, r;
 		cin >> l >> r;
 		count = 0;
-		for(int j=l-1; j<r-1; j++)
+		for(int j=l-1; j<r-1; j++){
 			if(s.at(j) == s.at(j+1)){
 				count++;
 			}
+		}
 		cout << count << endl;
 	}
 
