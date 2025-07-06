@@ -5,27 +5,24 @@
 
 using namespace std;
 
-#define MAX 1000000007
+#define MAX 500
 
 int table[MAX];
-int count; 
+int count=0; 
 
 int dp(string s, int index){
-	count = 0;
-
-	if(table[index] == -1){ //ainda nao foi calculado
+	if(table[index] == -1){ //ainda nao verificado
 		if(s.at(index) == s.at(index+1)){
-			//table.push_back(index);
-			table[index] = index;
-			count++;
+			return index;
 		}else{
-			table[index] = -1;
+			return 0;
 		}
-	}else if(table[index] != -1){ //ja foi calculado
-		return count;
 	}
 
-	return count;
+	if(table[index] == 0) //ja verificado
+		return 0;
+
+	return 0;
 } 
 
 int main(){
@@ -40,7 +37,13 @@ int main(){
 		int l, r;
 		cin >> l >> r;
 		for(int j=l-1; j<r-1; j++){
-			count = dp(s, j);	
+			if(dp(s, j) != 0){ 
+				count++;  
+				table[j] = dp(s, j);
+				cout << "j:" << j << endl;
+			}else{
+				table[j] = 0;
+			}	
 		}
 		cout << count << endl;
 	}
