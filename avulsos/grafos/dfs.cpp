@@ -36,6 +36,12 @@ int main() {
 	grafo[2][4] = 1;
 	grafo[3][5] = 1;
 
+	/*for(int i=0; i<5; i++){
+		for(int j=0; j<5; j++){
+			grafo[i][j] = 1;
+		}
+	}*/
+
 	int inicio = 0;
 	cout << "DFS a partir do vértice " << inicio << ": ";
 	DFS(inicio);
