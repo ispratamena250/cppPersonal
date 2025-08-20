@@ -1,43 +1,52 @@
-/*
- * This is for finding a file in a 'ls' command output
- * */
-
 #include <iostream>
 #include <string>
-#include <fstream>
+#include <array>
+#include <cstdio>
+#include <memory>
+#include <algorithm>
+#include <sstream>
 
 using namespace std;
 
-int main(int argc, char *argv[2]){
-	if(argc != 2){
+int main(int argc, char *argv[]) {
+	if (argc != 2) {
 		cout << "Error. Run: ./findStuff <argument>" << endl;
 		return 1;
 	}
 
-	string fileName = "/home/isaac/Documents/Anotacoes/findStuff_input.txt";
-	ifstream file1(fileName);
-	if(not file1.is_open()){
-		ofstream newFile (fileName);
-		newFile.close();
-		file1.open(fileName);
+	string s = argv[1];
+
+	string command = "ls -1";
+
+	array<char, 128> buffer;
+	string resultado;
+
+	unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
+	if (!pipe) {
+		cerr << "Error. Can't run command." << endl;
+		return 1;
 	}
 
-	string s = argv[1], line;
+	while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+		resultado += buffer.data();
+	}
 
+	istringstream iss(resultado);
+	string line;
 	int linesNum = 0;
 	bool found = false;
 
-	while(getline(file1, line)){
+	while (getline(iss, line)) {
 		linesNum++;
-		if(line.find(s) != string::npos){
-			cout << "Encontrado: linha " << linesNum << " -> " << line << endl;
+		if (line.find(s) != string::npos) {
+			cout << "Found: line " << linesNum << " -> " << line << endl;
 			found = true;
 		}
 	}
 
-	if(not found)
-		cout << "Nao encontrado" << endl;
-	
-	cout << endl;
+	if (!found)
+		cout << "Not found" << endl;
+
 	return 0;
 }
+
