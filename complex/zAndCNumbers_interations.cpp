@@ -11,11 +11,24 @@
 */
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
 int main(){
-    
+    int z, aux;
+
+    for(int x=0; x<=2; x++){
+        for(int y=0; y<=2; y++){
+            for(int n=0; n<=100; n++){
+                if(n == 0){
+                    z = 0;                    
+                    aux = z;
+                }
+                z = ;
+            }
+        }
+    }    
 
     cout << endl;
     return 0;
