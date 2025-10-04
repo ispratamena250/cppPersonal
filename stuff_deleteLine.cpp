@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 	cout << "Target: "<< target << endl;
 	while(getline(file1, line)){
 		size_t found = line.find(target);
-		if(found == std::string::npos){
+		if(found != std::string::npos){
 			file2 << line << endl;
 		}
 	}
