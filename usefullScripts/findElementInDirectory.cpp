@@ -15,6 +15,7 @@ using namespace std;
 int createFile();
 int findElement(string target);
 int deleteFile();
+string notUpperCase(string s);
 
 int main(int argc, char *argv[]) {
 	if(argc != 2){
@@ -22,7 +23,7 @@ int main(int argc, char *argv[]) {
 		return EXIT_FAILURE; 
 	}
 
-	string target = argv[1];
+	string target = notUpperCase(argv[1]);
 
 	createFile();
 
@@ -68,7 +69,8 @@ int findElement(string target){
 	string line;
 
 	while(getline(file2, line)){
-		size_t found = line.find(target);
+		string lineNotUpperCase = notUpperCase(line);
+		size_t found = lineNotUpperCase.find(target);
 		if(found != std::string::npos){
 			count++;
 		}
@@ -97,4 +99,19 @@ int deleteFile(){
 	}
 
 	return 0;
+}
+
+string notUpperCase(string s){
+	string ans;
+
+	for(size_t i=0; i<s.size(); i++){
+		if(s[i] >= 'A' and s[i] <= 'Z'){
+			s[i] = s[i] - ('A' - 'a');
+			ans.push_back(s[i]);
+		}else if(s[i] >= 'a' and s[i] <= 'z'){
+			ans.push_back(s[i]);
+		}
+	}
+
+	return ans;
 }
