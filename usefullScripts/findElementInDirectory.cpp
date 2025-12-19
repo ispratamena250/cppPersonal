@@ -2,6 +2,8 @@
  * This find a desired file in directory and says how many times it was found. Usefull for ls command.
  * Compile: $ g++ -Wall findElementInDirectory.cpp -o findElementInDirectory.x
  * Run: $ ./findElementInDirectory.x "<name>"
+ *
+ * You can use 'find . -name "<name>"' instead!!!
  * */
 #include <iostream>
 #include <string>
