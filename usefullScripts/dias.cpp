@@ -1,7 +1,7 @@
 /*
  * Script to calculate how many days are there between two dates
  * Compile: $ g++ -std=c++20 -Wall dias.cpp -o dias.x
- * Run: $ ./dias.x <"YYYY-DD-MM"> <"YYYY-DD-MM">
+ * Run: $ ./dias.x <"YYYY-MM-DD"> <"YYYY-MM-DD">
  * */
 #include <iostream>
 #include <chrono>
@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	string data1_str, data2_str;
 
 	if(argc != 3){
-		cout << "Error. Run: $ ./dias.x <\"YYYY-DD-MM\"> <\"YYYY-DD-MM\">" << endl;
+		cout << "Error. Run: $ ./dias.x <\"YYYY-MM-DD\"> <\"YYYY-MM-DD\">" << endl;
 		exit(1);
 	}
 
